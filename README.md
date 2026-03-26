@@ -71,7 +71,7 @@ client.connection.send(json.dumps({
 
 | Method                                  | Description                               |
 | --------------------------------------- | ----------------------------------------- |
-| `WebSocketClient(url, headers=None)`    | Initialize a client with optional headers |
+| `Client(url, headers=None)`    | Initialize a client with optional headers |
 | `set_parser(func)`                      | Override the default message parser       |
 | `register_handler(event_type, handler)` | Bind handler manually                     |
 | `on(event_type)`                        | Decorator-based handler registration      |
