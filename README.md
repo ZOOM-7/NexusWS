@@ -25,7 +25,7 @@ It allows you to create a WebSocket client that keeps the connection open and le
 
 ```bash
 pip install websocket-client
-pip install WSForge
+pip install NexusWS
 ```
 
 ---
@@ -34,15 +34,15 @@ pip install WSForge
 
 ```python
 import json
-from NexusWS import WebSocketClient
+from NexusWS import Client
 
 # Optional headers for authentication or custom requirements
 headers = {
     "Authorization": "Bearer YOUR_TOKEN",
-    "User-Agent": "WSForge/1.0"
+    "User-Agent": "NexusWS/1.0"
 }
 
-client = WebSocketClient(
+client = Client(
     "wss://example.com",
     headers=headers
 )
@@ -75,7 +75,7 @@ client.connection.send(json.dumps({
 
 | Method                                  | Description                                       |
 | --------------------------------------- | ------------------------------------------------- |
-| `WebSocketClient(url, headers=None)`    | Create a new client with URL and optional headers |
+| `Client(url, headers=None)`    | Create a new client with URL and optional headers |
 | `set_parser(func)`                      | Set a custom parser to process incoming messages  |
 | `register_handler(event_type, handler)` | Bind a handler function to a specific event type  |
 | `on(event_type)`                        | Decorator to bind a handler to an event           |
@@ -96,7 +96,7 @@ client.connection.send(json.dumps({
 
 ---
 
-## 🧠 Recommendations
+##  Recommendations
 
 * Use this version for testing, experimentation, or MVP projects
 * Do **not rely on it for production-critical systems** yet
